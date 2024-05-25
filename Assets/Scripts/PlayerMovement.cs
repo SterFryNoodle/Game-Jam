@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float rotationSpeed = 10f; 
     void Start()
     {
-        
+        speed = baseSpeed;
     }
     
     void Update()
@@ -26,7 +26,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxis("Horizontal") * Time.deltaTime * speed;
         verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * speed; //initialize variables to corresponding buttons accessed from Input Manager.
-
+        
+        Debug.Log("Horizontal Input: " + horizontalInput + "Vetical Input: " +  verticalInput);
         transform.Translate(horizontalInput, 0, verticalInput);
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift); //Set bool to determine what mode player speed should be set to based on input.
@@ -57,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
             // Move the player
             Vector3 move = direction * speed * Time.deltaTime;
+            Debug.Log("Move vector = " + move);
             transform.Translate(move , Space.World); //ensures movement direction is independent from current player rotation.
         }
     }
