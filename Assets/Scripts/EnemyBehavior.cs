@@ -6,8 +6,10 @@ public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] float speed = 3f;
     [SerializeField] GameObject enemyTarget;
+    [SerializeField] int enemyHealth = 5;
 
     Rigidbody enemyRb;
+
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
@@ -20,5 +22,16 @@ public class EnemyBehavior : MonoBehaviour
         Vector3 lookDirection = (enemyTarget.transform.position - transform.position).normalized;
 
         enemyRb.AddForce(lookDirection * speed);   
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        enemyHealth--;
+        Debug.Log("Enemy has been hit!");
+
+        if (enemyHealth == 0)
+        {            
+            Destroy(gameObject);
+        }
     }
 }
