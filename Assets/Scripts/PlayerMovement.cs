@@ -8,8 +8,8 @@ public class PlayerMovement : MonoBehaviour
     float verticalInput;
 
     [SerializeField] float speed;
-    [SerializeField][Range(1, 10)] float sprintSpeed = 3f;
-    [SerializeField][Range(1, 8)] float baseSpeed = 1f;
+    [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
+    [SerializeField][Range(1, 15)] float baseSpeed = 1f;
     
     Rigidbody rb;
     
