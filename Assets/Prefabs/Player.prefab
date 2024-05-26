@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5780043203889321296}
   - component: {fileID: 5135725072929100455}
   m_Layer: 0
-  m_Name: Bullets
+  m_Name: Bullet FX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2174678194008788523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.02, z: 0.54}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.585, y: 0.22987401, z: 1.0213363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5110260381839871379}
+  m_Father: {fileID: 8042731250795797488}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5780043203889321296
 ParticleSystem:
@@ -50,7 +50,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -751,7 +751,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.2
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -4125,7 +4125,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.990566, g: 0.8999674, b: 0.80833924, a: 1}
+      maxColor: {r: 1, g: 0.4893617, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4803,7 +4803,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.25
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 3259973014990728113}
   - component: {fileID: 173120106489940235}
   - component: {fileID: 1274544832699603553}
-  - component: {fileID: 3711953311286269386}
+  - component: {fileID: 5000380664615154756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4867,6 +4867,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5110260381839871379}
+  - {fileID: 4152200752332580710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2122193895317903465
@@ -4984,7 +4985,7 @@ MonoBehaviour:
   speed: 0
   sprintSpeed: 14
   baseSpeed: 8
---- !u!114 &3711953311286269386
+--- !u!114 &5000380664615154756
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4996,6 +4997,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 051678fdc02ec61439097946e35350ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 5780043203889321296}
 --- !u!1 &8781236802673729977
 GameObject:
   m_ObjectHideFlags: 0
@@ -5027,8 +5029,7 @@ Transform:
   m_LocalPosition: {x: -0.585, y: 0.234, z: 0.467}
   m_LocalScale: {x: 0.16733992, y: 0.20630068, z: 1.0265486}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4152200752332580710}
+  m_Children: []
   m_Father: {fileID: 8042731250795797488}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7052272086333777970

@@ -4,35 +4,31 @@ using UnityEngine;
 
 public class ProcessFireInput : MonoBehaviour
 {
-    GameObject bullet;
+    [SerializeField] ParticleSystem bullet;
+
     void Start()
     {
-        Transform particleSystemTransform = transform.Find("Gun/Bullets");
-
-        if (particleSystemTransform != null )
-        {            
-            var emissionModule = bullet.GetComponent<ParticleSystem>().emission;            
-        }
-        else
-        {
-            Debug.Log("Child object not found!");
-        }
+        bullet = GetComponentInChildren<ParticleSystem>();        
     }
 
     void Update()
     {
-        //FireInput();
+        FireInput();
     }
 
-    /*void FireInput()
+    void FireInput()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse button pressed
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            emissionModule.enabled = true;
+            var getEmissionModule = bullet.emission;
+
+            getEmissionModule.enabled = true;
         }
-        else if (Input.GetMouseButtonUp(0)) // Left mouse button released
+        else if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            emissionModule.enabled = false;
+            var getEmissionModule = bullet.emission;
+
+            getEmissionModule.enabled = false;
         }
-    }*/
+    }    
 }
