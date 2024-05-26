@@ -5,19 +5,19 @@ using UnityEngine;
 public class EnemyBehavior : MonoBehaviour
 {
     [SerializeField] float speed = 3f;
-    [SerializeField] GameObject playerObject;
+    [SerializeField] GameObject enemyTarget;
 
     Rigidbody enemyRb;
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        playerObject = FindObjectOfType<GameObject>();
+        enemyTarget = FindObjectOfType<GameObject>();
     }
 
     
     void Update()
     {
-        Vector3 lookDirection = (playerObject.transform.position - transform.position).normalized;
+        Vector3 lookDirection = (enemyTarget.transform.position - transform.position).normalized;
 
         enemyRb.AddForce(lookDirection * speed);   
     }
