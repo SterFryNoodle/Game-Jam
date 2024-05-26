@@ -5,21 +5,20 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float horizontalInput;
-    float verticalInput;
-
+    float verticalInput;    
+    
     [SerializeField] float speed; //SerializeField means you can access & change the variable value in Unity.
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
-    [SerializeField][Range(1, 15)] float baseSpeed = 1f;
+    [SerializeField][Range(1, 15)] float baseSpeed = 1f;    
         
     void Start()
     {        
-        speed = baseSpeed; // initializes player speed at base once game starts.
+        speed = baseSpeed; // initializes player speed at base once game starts.        
     }
 
     void Update()
     {
-        GetVector3Input();
-        ProcessFireInput();
+        GetVector3Input();        
     }
 
     void GetVector3Input()
@@ -28,8 +27,7 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical") * Time.deltaTime * speed; //initialize variables to corresponding buttons accessed from Input Manager.
 
         transform.Translate(horizontalInput, 0 , verticalInput);
-        Debug.Log("Horizontal Input: " + horizontalInput + "Vetical Input: " + verticalInput);
-        
+                
         bool isSprinting = Input.GetKey(KeyCode.LeftShift); //Set bool to determine what mode player speed should be set to based on input.
 
         if (isSprinting)
@@ -40,12 +38,7 @@ public class PlayerController : MonoBehaviour
         {
             speed = baseSpeed;
         }
-    }
-    
-    void ProcessFireInput()
-    {
-
-    }
+    }    
 }
 
     
