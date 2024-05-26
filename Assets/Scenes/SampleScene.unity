@@ -429,7 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1997051720}
   mouseSensitivity: 150
-  distanceFromPlayer: 8
+  distanceFromPlayer: 14
   cameraHeight: 0.25
 --- !u!1 &1558425870
 GameObject:
@@ -555,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274544832699603553, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
       propertyPath: sprintSpeed
-      value: 16
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4201731999367108179, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
       propertyPath: m_Name
