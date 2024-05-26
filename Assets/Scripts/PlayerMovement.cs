@@ -10,12 +10,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
     [SerializeField][Range(1, 15)] float baseSpeed = 1f;
-    
-    Rigidbody rb;
-    
+        
     void Start()
-    {
-        rb = GetComponent<Rigidbody>();
+    {        
         speed = baseSpeed; // initializes player speed at base once game starts.
     }
 
