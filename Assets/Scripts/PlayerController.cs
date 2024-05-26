@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     float horizontalInput;
     float verticalInput;
 
-    [SerializeField] float speed;
+    [SerializeField] float speed; //SerializeField means you can access & change the variable value in Unity.
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
     [SerializeField][Range(1, 15)] float baseSpeed = 1f;
         
@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         GetVector3Input();
+        ProcessFireInput();
     }
 
     void GetVector3Input()
@@ -39,7 +40,12 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = baseSpeed;
         }
-    }    
+    }
+    
+    void ProcessFireInput()
+    {
+
+    }
 }
 
     

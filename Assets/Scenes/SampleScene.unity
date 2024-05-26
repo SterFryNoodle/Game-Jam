@@ -431,25 +431,6 @@ MonoBehaviour:
   mouseSensitivity: 150
   distanceFromPlayer: 14
   cameraHeight: 0.25
---- !u!1 &1558425870 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3335309131671212786, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
-  m_PrefabInstance: {fileID: 7675932139258659156}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1558425875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558425870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a913f1611374ebd49a8003e3bccbb28d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  playerObject: {fileID: 1997051715}
 --- !u!1 &1997051715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4201731999367108179, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
@@ -577,13 +558,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6204743300416483781, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
+      propertyPath: playerObject
+      value: 
+      objectReference: {fileID: 1997051715}
+    - target: {fileID: 7624156949748467896, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
+      propertyPath: m_Constraints
+      value: 80
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3335309131671212786, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1558425875}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

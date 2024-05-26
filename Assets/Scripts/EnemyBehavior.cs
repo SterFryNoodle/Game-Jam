@@ -11,7 +11,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         enemyRb = GetComponent<Rigidbody>();
-        playerObject = GetComponent<GameObject>();
+        playerObject = FindObjectOfType<GameObject>();
     }
 
     
