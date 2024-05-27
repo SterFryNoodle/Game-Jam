@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] int enemyHealth = 5;
 
     Rigidbody enemyRb;
+    bool newPathNeeded;
 
     void Start()
     {
@@ -19,9 +20,7 @@ public class EnemyBehavior : MonoBehaviour
     
     void Update()
     {
-        Vector3 lookDirection = (enemyTarget.transform.position - transform.position).normalized;
-
-        enemyRb.AddForce(lookDirection * speed);   
+        FindPathToPlayer();  
     }
 
     private void OnParticleCollision(GameObject other)
@@ -33,5 +32,28 @@ public class EnemyBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void FindPathToPlayer()
+    {
+        newPathNeeded = PathIsBlocked(gameObject);
+
+        if (newPathNeeded)
+        {
+            //recalculate enemy path.
+        }
+        else
+        {
+            Vector3 lookDirection = (enemyTarget.transform.position - transform.position).normalized;
+
+            enemyRb.AddForce(lookDirection * speed);
+        }        
+    }
+
+    bool PathIsBlocked(GameObject target)
+    {
+        bool isBlocked;
+
+        return isBlocked;
     }
 }
