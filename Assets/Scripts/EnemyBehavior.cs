@@ -1,26 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyBehavior : MonoBehaviour
 {
-    [SerializeField] float speed = 3f;
-    [SerializeField] GameObject enemyTarget;
+    private NavMeshAgent agent;
+    public Transform enemyTarget;
     [SerializeField] int enemyHealth = 5;
 
-    Rigidbody enemyRb;
-    bool newPathNeeded;
-
     void Start()
-    {
-        enemyRb = GetComponent<Rigidbody>();
-        enemyTarget = FindObjectOfType<GameObject>();
+    {        
+        agent = GetComponent<NavMeshAgent>();
     }
 
     
     void Update()
     {
-        FindPathToPlayer();  
+        agent.destination = enemyTarget.position;
     }
 
     private void OnParticleCollision(GameObject other)
@@ -32,28 +29,5 @@ public class EnemyBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    void FindPathToPlayer()
-    {
-        newPathNeeded = PathIsBlocked(gameObject);
-
-        if (newPathNeeded)
-        {
-            //recalculate enemy path.
-        }
-        else
-        {
-            Vector3 lookDirection = (enemyTarget.transform.position - transform.position).normalized;
-
-            enemyRb.AddForce(lookDirection * speed);
-        }        
-    }
-
-    bool PathIsBlocked(GameObject target)
-    {
-        bool isBlocked;
-
-        return isBlocked;
-    }
+    }    
 }
