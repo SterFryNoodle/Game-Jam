@@ -24,13 +24,13 @@ public class EnemyBehavior : MonoBehaviour
         enemyRb.AddForce(lookDirection * speed);   
     }
 
-    void OnCollisionEnter(Collision collision)
+    private void OnParticleCollision(GameObject other)
     {
         enemyHealth--;
         Debug.Log("Enemy has been hit!");
 
         if (enemyHealth == 0)
-        {            
+        {
             Destroy(gameObject);
         }
     }

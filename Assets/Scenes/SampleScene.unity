@@ -453,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5780043203889321296, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8042731250795797488, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
