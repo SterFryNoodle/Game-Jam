@@ -9,6 +9,9 @@ public class CameraBehavior : MonoBehaviour
     [SerializeField] float distanceFromPlayer = 5f;
     [SerializeField] float cameraHeight = 2f;
 
+    [SerializeField] float minVerticalRotation = 0f;
+    [SerializeField] float maxVerticalRotation = 60f;
+
     private float xRotation = 0f;
     private float yRotation = 0f;
 
@@ -24,7 +27,7 @@ public class CameraBehavior : MonoBehaviour
 
         yRotation += mouseX;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -35f, 60f); //clamp vert. rotation to avoid clipping.
+        xRotation = Mathf.Clamp(xRotation, minVerticalRotation, maxVerticalRotation); //clamp vert. rotation to avoid clipping.
 
         // Rotate the player based on horizontal mouse movement
         player.rotation = Quaternion.Euler(0f, yRotation, 0f);

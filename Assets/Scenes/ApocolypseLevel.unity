@@ -19,7 +19,7 @@ RenderSettings:
   m_FogMode: 1
   m_FogDensity: 0.42
   m_LinearFogStart: 0
-  m_LinearFogEnd: 20
+  m_LinearFogEnd: 25
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -524,6 +524,8 @@ MonoBehaviour:
   mouseSensitivity: 150
   distanceFromPlayer: 14
   cameraHeight: 0.25
+  minVerticalRotation: 0
+  maxVerticalRotation: 60
 --- !u!1 &1546727300
 GameObject:
   m_ObjectHideFlags: 0
