@@ -1156,10 +1156,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1997051720}
   mouseSensitivity: 150
-  distanceFromPlayer: 14
+  distanceFromPlayer: 12
   cameraHeight: 0.25
-  minVerticalRotation: 0
-  maxVerticalRotation: 60
+  minVerticalRotation: 25
+  maxVerticalRotation: 75
 --- !u!1001 &1026461522
 PrefabInstance:
   m_ObjectHideFlags: 0
