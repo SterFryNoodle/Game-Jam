@@ -47,8 +47,7 @@ public class PlayerController : MonoBehaviour
             // Prevent player from moving through the barrier
             Vector3 direction = transform.position - other.transform.position;
             direction.y = 0; // Only consider horizontal direction
-            transform.position += direction.normalized * speed * Time.deltaTime;
-            
+            transform.position += direction.normalized * speed * Time.deltaTime;            
         }
     }
 }
