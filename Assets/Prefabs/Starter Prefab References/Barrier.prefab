@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 7455324490009832520}
   - component: {fileID: 8589881474338343174}
   - component: {fileID: 5048930833023790961}
-  - component: {fileID: 4725040850441157587}
-  - component: {fileID: 3612946981155023089}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Barrier
@@ -120,35 +118,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c980a4f97563075479531e536c0e8c17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4725040850441157587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661799236984403986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35e95dc5ff2b64380880dd7ac5922847, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Size: {x: 4.2, y: 1.25, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
-  m_Area: 3
-  m_AffectedAgents: ffffffff
---- !u!208 &3612946981155023089
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5661799236984403986}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
