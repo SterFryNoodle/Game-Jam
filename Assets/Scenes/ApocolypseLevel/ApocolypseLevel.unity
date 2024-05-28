@@ -1756,7 +1756,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.25, y: 1, z: 1.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1493046923
 MeshRenderer:
@@ -2194,6 +2194,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4201731999367108179, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201731999367108179, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 8042731250795797488, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
