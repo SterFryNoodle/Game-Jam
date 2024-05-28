@@ -12,7 +12,7 @@ NavMeshProjectSettings:
   - name: Jump
     cost: 3
   - name: Barrier
-    cost: 2
+    cost: 1
   - name: 
     cost: 1
   - name: 
