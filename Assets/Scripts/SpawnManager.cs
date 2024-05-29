@@ -11,13 +11,7 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemies());
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    }   
 
     IEnumerator SpawnEnemies()
     {

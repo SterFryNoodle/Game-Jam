@@ -10,18 +10,34 @@ public class EnemyBehavior : MonoBehaviour
     private ObjectPool pool;
     private int enemyHealth;
 
-    public Transform enemyTarget;
-
     [SerializeField] int initialEnemyHealth = 5;
     [SerializeField] float barrierInteractionLength = 4f;
+    [SerializeField] Transform enemyTarget;
 
-    void Start()
-    {        
-        agent = GetComponent<NavMeshAgent>();
-        pool = FindObjectOfType<ObjectPool>();
+    void OnEnable()
+    {
         enemyHealth = initialEnemyHealth;
+        FindPlayerTag();
     }
-    
+    void Start()
+    {
+        agent = GetComponent<NavMeshAgent>();
+        pool = FindObjectOfType<ObjectPool>();        
+    }
+
+    public void FindPlayerTag()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            enemyTarget = playerObject.transform;
+        }
+        else
+        {
+            Debug.Log("Error! Please make sure player has correct tag.");
+        }
+    }
+
     void Update()
     {
         if (!isInteractingWithBarrier && enemyTarget != null)
@@ -36,8 +52,7 @@ public class EnemyBehavior : MonoBehaviour
         Debug.Log("Enemy has been hit!");
 
         if (enemyHealth == 0)
-        {
-            enemyHealth = initialEnemyHealth;
+        {           
             pool.ReturnEnemy(gameObject);
         }
     }

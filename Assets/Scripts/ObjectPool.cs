@@ -12,7 +12,7 @@ public class ObjectPool : MonoBehaviour
 
     private List<GameObject> enemyPool;
     private int currentPoolSize;
-
+    
     void Start()
     {
         enemyPool = new List<GameObject>(); //initialize list.
@@ -63,7 +63,7 @@ public class ObjectPool : MonoBehaviour
             enemyPool.Add(enemy);
         }
 
-        if (currentPoolSize <= 50)
+        if (currentPoolSize <= maxPoolSize)
         {
             currentPoolSize += amt;
         }
