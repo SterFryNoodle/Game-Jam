@@ -16,6 +16,8 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnEnable()
     {
+        Debug.Log("OnEnable called!");
+
         enemyHealth = initialEnemyHealth;
         FindPlayerTag();
     }
@@ -24,26 +26,27 @@ public class EnemyBehavior : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         pool = FindObjectOfType<ObjectPool>();        
     }
-
-    public void FindPlayerTag()
-    {
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
-        {
-            enemyTarget = playerObject.transform;
-        }
-        else
-        {
-            Debug.Log("Error! Please make sure player has correct tag.");
-        }
-    }
-
+    
     void Update()
     {
         if (!isInteractingWithBarrier && enemyTarget != null)
         {
             agent.destination = enemyTarget.position;
         }        
+    }
+    void FindPlayerTag()
+    {
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            enemyTarget = playerObject.transform;
+
+            Debug.Log("Player has found: " + enemyTarget);
+        }
+        else
+        {
+            Debug.Log("Error! Please make sure player has correct tag.");
+        }
     }
 
     private void OnParticleCollision(GameObject other)
