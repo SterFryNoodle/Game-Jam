@@ -4,15 +4,33 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] ObjectPool pool;
+    [SerializeField] float spawnInterval = 5f;
+    [SerializeField] float spawnXPos = 40f;
+    [SerializeField] float spawnZpos = -10f;
     void Start()
     {
-        
+        StartCoroutine(SpawnEnemies());
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    IEnumerator SpawnEnemies()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(spawnInterval);
+            GameObject enemy = pool.GetEnemy();
+            enemy.transform.position = GetSpawnPosition();
+        }       
+    }
+
+    Vector3 GetSpawnPosition()
+    {
+        return new Vector3(spawnXPos, 1, spawnZpos);
     }
 }
