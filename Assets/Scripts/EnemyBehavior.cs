@@ -7,6 +7,8 @@ public class EnemyBehavior : MonoBehaviour
 {
     private NavMeshAgent agent;
     private bool isInteractingWithBarrier = false;
+    private ObjectPool pool;
+
     public Transform enemyTarget;
 
     [SerializeField] int enemyHealth = 5;
@@ -15,6 +17,7 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {        
         agent = GetComponent<NavMeshAgent>();
+        pool = FindObjectOfType<ObjectPool>();
     }
 
     
@@ -33,7 +36,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if (enemyHealth == 0)
         {
-            Destroy(gameObject);
+            pool.ReturnEnemy(gameObject);
         }
     }
 
