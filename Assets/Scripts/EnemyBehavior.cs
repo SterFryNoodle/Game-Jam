@@ -8,18 +8,19 @@ public class EnemyBehavior : MonoBehaviour
     private NavMeshAgent agent;
     private bool isInteractingWithBarrier = false;
     private ObjectPool pool;
+    private int enemyHealth;
 
     public Transform enemyTarget;
 
-    [SerializeField] int enemyHealth = 5;
+    [SerializeField] int initialEnemyHealth = 5;
     [SerializeField] float barrierInteractionLength = 4f;
 
     void Start()
     {        
         agent = GetComponent<NavMeshAgent>();
         pool = FindObjectOfType<ObjectPool>();
+        enemyHealth = initialEnemyHealth;
     }
-
     
     void Update()
     {
@@ -36,6 +37,7 @@ public class EnemyBehavior : MonoBehaviour
 
         if (enemyHealth == 0)
         {
+            enemyHealth = initialEnemyHealth;
             pool.ReturnEnemy(gameObject);
         }
     }

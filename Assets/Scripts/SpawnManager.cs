@@ -24,6 +24,8 @@ public class SpawnManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
+
+            //spawns enemy prefabs after they have been set active.
             GameObject enemy = pool.GetEnemy();
             enemy.transform.position = GetSpawnPosition();
         }       

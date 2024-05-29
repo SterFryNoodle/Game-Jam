@@ -63,7 +63,14 @@ public class ObjectPool : MonoBehaviour
             enemyPool.Add(enemy);
         }
 
-        currentPoolSize += amt;
+        if (currentPoolSize <= 50)
+        {
+            currentPoolSize += amt;
+        }
+        else
+        {
+            return;
+        }
     }
 
     IEnumerator IncreaseSizeOverTime()
