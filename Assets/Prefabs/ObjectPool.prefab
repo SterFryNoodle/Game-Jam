@@ -48,4 +48,4 @@ MonoBehaviour:
   initialPoolSize: 5
   maxPoolSize: 50
   amtIncrease: 5
-  timeInterval: 20
+  timeInterval: 15
