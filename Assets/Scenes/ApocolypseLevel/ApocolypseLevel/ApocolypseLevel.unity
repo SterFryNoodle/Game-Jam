@@ -2291,6 +2291,10 @@ PrefabInstance:
       propertyPath: allyTarget
       value: 
       objectReference: {fileID: 3468359684202594160, guid: 2fec251799df1e14b837f0f4e838d393, type: 3}
+    - target: {fileID: 6377020189300489692, guid: f78f35c9a5ba3b344ab914cee61dd100, type: 3}
+      propertyPath: safeDistance
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -22,6 +22,12 @@ public class EnemyBehavior : MonoBehaviour
         FindPlayerTag();
         EnemyManager.Instance.RegisterEnemy(enemyTarget);
     }
+
+    void OnDisable()
+    {
+        EnemyManager.Instance.UnRegisterEnemy(enemyTarget);
+    }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
