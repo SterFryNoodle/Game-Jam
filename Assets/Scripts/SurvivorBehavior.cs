@@ -7,11 +7,11 @@ public class SurvivorBehavior : MonoBehaviour
 {    
     Transform allyTarget;
     bool isAttacking;
-    
-    [SerializeField] float backUpDistance = 2f;
-    [SerializeField] float safeDistance = 10f;
-    [SerializeField] float detectionRange = 20f;
+
+    [SerializeField] float detectionRange = 20f;    
+    [SerializeField] float safeDistance = 10f;    
     [SerializeField] float attackRange = 10f;
+    [SerializeField] float backUpDistance = 2f;
     [SerializeField] ParticleSystem allyBullet;
     void Start()
     {
