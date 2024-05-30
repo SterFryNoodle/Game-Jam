@@ -15,12 +15,10 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] Transform enemyTarget;
 
     void OnEnable()
-    {
-        Debug.Log("OnEnable called!");
+    {        
         EnemyManager.Instance.RegisterEnemy(transform);
         enemyHealth = initialEnemyHealth;
-        FindPlayerTag();
-        
+        FindPlayerTag();        
     }
 
     void OnDisable()
@@ -46,9 +44,7 @@ public class EnemyBehavior : MonoBehaviour
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
-            enemyTarget = playerObject.transform;
-
-            Debug.Log("Player has found: " + enemyTarget);
+            enemyTarget = playerObject.transform;            
         }
         else
         {
@@ -59,8 +55,7 @@ public class EnemyBehavior : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         enemyHealth--;
-        Debug.Log("Enemy has been hit!");
-
+        
         if (enemyHealth == 0)
         {           
             pool.ReturnEnemy(gameObject);
