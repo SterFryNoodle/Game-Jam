@@ -9,10 +9,10 @@ public class SurvivorBehavior : MonoBehaviour
     NavMeshAgent allyAgent;
     bool isAttacking;
 
-    [SerializeField] float detectionRange = 20f;    
+    [SerializeField] float detectionRange = 25f;    
     [SerializeField] float safeDistance = 10f;
-    [SerializeField] float attackRange = 8f;
-    [SerializeField] float backUpDistance = 2f;
+    [SerializeField] float attackRange = 16f;
+    [SerializeField] float backUpDistance = 3f;
     [SerializeField] ParticleSystem allyBullet;
     void Start()
     {
