@@ -20,6 +20,7 @@ public class EnemyBehavior : MonoBehaviour
 
         enemyHealth = initialEnemyHealth;
         FindPlayerTag();
+        EnemyManager.Instance.RegisterEnemy(enemyTarget);
     }
     void Start()
     {

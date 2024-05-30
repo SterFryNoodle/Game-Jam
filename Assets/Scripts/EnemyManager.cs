@@ -4,15 +4,54 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static EnemyManager Instance { get; private set; }
+
+    private List<Transform> enemies = new List<Transform>();
+
+    private void Awake()
     {
-        
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RegisterEnemy(Transform enemy)
     {
-        
+        if(!enemies.Contains(enemy))
+        {
+            enemies.Add(enemy);
+        }
+    }
+
+    public void UnRegisterEnemy(Transform enemy)
+    {
+        if (!enemies.Contains(enemy))
+        {
+            enemies.Remove(enemy);
+        }
+    }
+
+    public Transform GetClosestEnemy(Transform ally)
+    {
+        Transform closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach(Transform enemy in enemies)
+        {
+            float distance = Vector3.Distance(ally.position, enemy.position);
+
+            if(distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestEnemy = enemy;
+            }
+        }
+
+        return closestEnemy;
     }
 }
