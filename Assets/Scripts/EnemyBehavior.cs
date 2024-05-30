@@ -17,15 +17,15 @@ public class EnemyBehavior : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("OnEnable called!");
-
+        EnemyManager.Instance.RegisterEnemy(transform);
         enemyHealth = initialEnemyHealth;
         FindPlayerTag();
-        EnemyManager.Instance.RegisterEnemy(enemyTarget);
+        
     }
 
     void OnDisable()
     {
-        EnemyManager.Instance.UnRegisterEnemy(enemyTarget);
+        EnemyManager.Instance.UnRegisterEnemy(transform);
     }
 
     void Start()

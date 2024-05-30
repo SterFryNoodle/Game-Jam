@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class SurvivorBehavior : MonoBehaviour
-{
-    NavMeshAgent allyAgent;
+{    
     Transform allyTarget;
+    bool isAttacking;
     
     [SerializeField] float backUpDistance = 2f;
-    [SerializeField] float detectionRange = 15f;
-    [SerializeField] float attackRange = 5f;
-    private void Awake()
+    [SerializeField] float safeDistance = 10f;
+    [SerializeField] float detectionRange = 20f;
+    [SerializeField] float attackRange = 10f;
+    [SerializeField] ParticleSystem allyBullet;
+    void Start()
     {
-        allyAgent = GetComponent<NavMeshAgent>();
+        allyBullet = GetComponentInChildren<ParticleSystem>();
     }
-        
+
     void Update()
     {
         MoveFromEnemyInRange();
@@ -23,43 +25,50 @@ public class SurvivorBehavior : MonoBehaviour
 
     void MoveFromEnemyInRange()
     {
-        if (allyTarget == null)
-        {
-            allyTarget = EnemyManager.Instance.GetClosestEnemy(transform);
-        }
-        else
-        {
-            float distanceToEnemy = Vector3.Distance(transform.position, allyTarget.position);
+        allyTarget = EnemyManager.Instance.GetClosestEnemy(transform);
 
-            if (distanceToEnemy < detectionRange)
-            {
-                Vector3 directionAwayFromEnemy = (transform.position - allyTarget.position).normalized;
-                Vector3 newPosition = transform.position + directionAwayFromEnemy * backUpDistance; //takes into account both distance between ally and enemy and backupDistance.
-                allyAgent.SetDestination(newPosition);
+        if (allyTarget != null )
+        {
+            float distanceToEnemy = Vector3.Distance(transform.position, allyTarget.position); //Continuously find closest enemy.
 
-                if (distanceToEnemy < attackRange)
+            if (distanceToEnemy <= detectionRange)
+            {                
+                // Enemy is within attack range.
+                if (distanceToEnemy <= attackRange)
                 {
-                    AttackEnemy();
+                    isAttacking = true;
+                    AttackEnemy(isAttacking);
                 }
-            }
-
-            else
-            {
-                TrackEnemy();
-            }
+                else if (distanceToEnemy < safeDistance)
+                {
+                    Vector3 directionAwayFromEnemy = (transform.position - allyTarget.position).normalized;
+                    Vector3 newPosition = transform.position + directionAwayFromEnemy * backUpDistance; //Takes into account both distance between ally and enemy and backupDistance.
+                    transform.position = newPosition;
+                }
+                else
+                {
+                    TrackEnemy();
+                }
+            }            
         }
     }
 
-    void AttackEnemy()
+    void AttackEnemy(bool attack)
     {
-
-
+        if (attack)
+        {
+            var getEmissionModule = allyBullet.emission;
+            getEmissionModule.enabled = attack;
+        }
+        else if(!attack)
+        {
+            var getEmissionModule = allyBullet.emission;
+            getEmissionModule.enabled = !attack;
+        }        
     }
 
     void TrackEnemy()
     {
         transform.LookAt(allyTarget);
     }
-
-
 }

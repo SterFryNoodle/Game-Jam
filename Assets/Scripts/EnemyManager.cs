@@ -30,7 +30,7 @@ public class EnemyManager : MonoBehaviour
 
     public void UnRegisterEnemy(Transform enemy)
     {
-        if (!enemies.Contains(enemy))
+        if (enemies.Contains(enemy))
         {
             enemies.Remove(enemy);
         }
