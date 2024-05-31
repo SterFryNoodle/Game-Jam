@@ -87,7 +87,7 @@ public class EnemyManager : MonoBehaviour
     {
         if ((ally.CompareTag("Player") || ally.CompareTag("Survivor")) && allies.Contains(ally))
         {
-            allies.Add(ally);
+            allies.Remove(ally);
         }
     }
 }

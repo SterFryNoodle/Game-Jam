@@ -295,8 +295,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 8042731250795797488}
     m_Modifications:
     - target: {fileID: 1832850919586611237, guid: 6d633e8aeaf301b4a923257e957e5a41, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832850919586611237, guid: 6d633e8aeaf301b4a923257e957e5a41, type: 3}
       propertyPath: SizeBySpeedModule.enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832850919586611237, guid: 6d633e8aeaf301b4a923257e957e5a41, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1832850919586611237, guid: 6d633e8aeaf301b4a923257e957e5a41, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.size

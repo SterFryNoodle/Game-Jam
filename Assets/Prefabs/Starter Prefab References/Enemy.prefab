@@ -150,6 +150,7 @@ MonoBehaviour:
   initialEnemyHealth: 5
   barrierInteractionLength: 4
   enemyTarget: {fileID: 8042731250795797488, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
+  detectionRange: 20
 --- !u!195 &7302850638387288364
 NavMeshAgent:
   m_ObjectHideFlags: 0
