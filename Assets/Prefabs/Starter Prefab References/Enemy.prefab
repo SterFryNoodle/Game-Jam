@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a913f1611374ebd49a8003e3bccbb28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialEnemyHealth: 5
+  initialEnemyHealth: 8
   barrierInteractionLength: 4
   enemyTarget: {fileID: 8042731250795797488, guid: 9575613c4cdcae3478a4648f2040117a, type: 3}
   detectionRange: 20
