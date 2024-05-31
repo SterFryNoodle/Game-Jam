@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed; //SerializeField means you can access & change the variable value in Unity.
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
     [SerializeField][Range(1, 15)] float baseSpeed = 1f;
-
+    
     void OnEnable()
     {
         EnemyManager.Instance.RegisterAlly(transform);

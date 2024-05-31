@@ -8,7 +8,7 @@ public class SurvivorBehavior : MonoBehaviour
     Transform allyTarget;
     NavMeshAgent allyAgent;
     bool isAttacking;
-
+    
     [SerializeField] float detectionRange = 25f;    
     [SerializeField] float safeDistance = 10f;
     [SerializeField] float attackRange = 16f;
@@ -70,8 +70,8 @@ public class SurvivorBehavior : MonoBehaviour
                 TrackEnemy();
             }
         }
-    }
-
+    }    
+    
     void AttackEnemy(bool attack)
     {
         var getEmissionModule = allyBullet.emission;
