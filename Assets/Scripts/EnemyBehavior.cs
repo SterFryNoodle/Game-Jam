@@ -13,6 +13,7 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField] int initialEnemyHealth = 5;
     [SerializeField] float barrierInteractionLength = 4f;
     [SerializeField] Transform enemyTarget;
+    [SerializeField] float detectionRange = 20f;
 
     void OnEnable()
     {        
@@ -34,15 +35,40 @@ public class EnemyBehavior : MonoBehaviour
     
     void Update()
     {
+        UpdateTarget();
+        
         if (!isInteractingWithBarrier && enemyTarget != null)
         {
             agent.destination = enemyTarget.position;
         }        
     }
+    
+    void UpdateTarget()
+    {
+        Transform closestTarget = EnemyManager.Instance.GetClosestAlly(transform);
+
+        if (closestTarget != enemyTarget)
+        {
+            enemyTarget = closestTarget;
+        }
+
+        if (enemyTarget != null)
+        {
+            float distanceToTarget = Vector3.Distance(transform.position, enemyTarget.position);
+
+            if (distanceToTarget <= detectionRange)
+            {
+                agent.SetDestination(enemyTarget.position);
+            }
+        }
+    }
+    
     void FindPlayerTag()
     {
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
+        float distanceToPlayer = Vector3.Distance(transform.position, playerObject.transform.position);
+
+        if (playerObject != null && distanceToPlayer > detectionRange)
         {
             enemyTarget = playerObject.transform;            
         }

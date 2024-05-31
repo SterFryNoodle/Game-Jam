@@ -7,6 +7,7 @@ public class EnemyManager : MonoBehaviour
     public static EnemyManager Instance { get; private set; }
 
     private List<Transform> enemies = new List<Transform>();
+    private List<Transform> allies = new List<Transform>();
 
     private void Awake()
     {
@@ -25,25 +26,25 @@ public class EnemyManager : MonoBehaviour
         if(!enemies.Contains(enemy))
         {
             enemies.Add(enemy);
-        }
-    }
+        }        
+    }    
 
     public void UnRegisterEnemy(Transform enemy)
     {
         if (enemies.Contains(enemy))
         {
             enemies.Remove(enemy);
-        }
+        }        
     }
-
-    public Transform GetClosestEnemy(Transform ally)
+    
+    public Transform GetClosestEnemy(Transform currentTransform)
     {
         Transform closestEnemy = null;
         float closestDistance = Mathf.Infinity;
 
         foreach(Transform enemy in enemies)
         {
-            float distance = Vector3.Distance(ally.position, enemy.position);
+            float distance = Vector3.Distance(currentTransform.position, enemy.position);
 
             if(distance < closestDistance)
             {
@@ -53,5 +54,40 @@ public class EnemyManager : MonoBehaviour
         }
 
         return closestEnemy;
+    }
+
+    public Transform GetClosestAlly(Transform currentTransform)
+    {
+        Transform closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        foreach (Transform ally in allies)
+        {
+            float distance = Vector3.Distance(currentTransform.position, ally.position);
+
+            if (distance < closestDistance)
+            {
+                closestDistance = distance;
+                closestEnemy = ally;
+            }
+        }
+
+        return closestEnemy;
+    }
+
+    public void RegisterAlly(Transform ally)
+    {
+        if ((ally.CompareTag("Player") || ally.CompareTag("Survivor")) && !allies.Contains(ally))
+        {
+            allies.Add(ally);
+        }
+    }
+
+    public void UnRegisterAlly(Transform ally)
+    {
+        if ((ally.CompareTag("Player") || ally.CompareTag("Survivor")) && allies.Contains(ally))
+        {
+            allies.Add(ally);
+        }
     }
 }

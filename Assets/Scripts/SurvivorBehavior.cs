@@ -14,6 +14,17 @@ public class SurvivorBehavior : MonoBehaviour
     [SerializeField] float attackRange = 16f;
     [SerializeField] float backUpDistance = 3f;
     [SerializeField] ParticleSystem allyBullet;
+
+    void OnEnable()
+    {
+        EnemyManager.Instance.RegisterAlly(transform);
+    }
+
+    void OnDisable()
+    {
+        EnemyManager.Instance.UnRegisterAlly(transform);
+    }
+
     void Start()
     {
         allyBullet = GetComponentInChildren<ParticleSystem>();
