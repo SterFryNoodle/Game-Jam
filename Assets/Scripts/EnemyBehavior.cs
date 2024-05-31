@@ -72,7 +72,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             enemyTarget = playerObject.transform;            
         }
-        else
+        else if (playerObject == null) 
         {
             Debug.Log("Error! Please make sure player has correct tag.");
         }

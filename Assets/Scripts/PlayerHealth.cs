@@ -11,13 +11,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-
     
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))

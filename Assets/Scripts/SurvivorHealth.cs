@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class SurvivorHealth : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] int maxHealth = 100;
+    private int currentHealth;
+    private int dmgTaken = 10;
     void Start()
     {
-        
+        currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage(dmgTaken);
+        }
+    }
+
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

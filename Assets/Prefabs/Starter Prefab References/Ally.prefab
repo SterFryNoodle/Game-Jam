@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 9200395736137425013}
   - component: {fileID: 2371798773130483762}
   - component: {fileID: 6377020189300489692}
+  - component: {fileID: 5512236423690610317}
   - component: {fileID: 4772297848854178928}
   m_Layer: 0
   m_Name: Ally
@@ -259,6 +260,19 @@ MonoBehaviour:
   attackRange: 16
   backUpDistance: 3
   allyBullet: {fileID: 4632388887746710246, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+--- !u!114 &5512236423690610317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3811053564846569771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b19ce82aa3a7840b58f41e788e5f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
 --- !u!195 &4772297848854178928
 NavMeshAgent:
   m_ObjectHideFlags: 0
