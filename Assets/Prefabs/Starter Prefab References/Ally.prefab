@@ -308,6 +308,18 @@ PrefabInstance:
       value: Bullet FX
       objectReference: {fileID: 0}
     - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.58457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.58457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.58457
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54999995
       objectReference: {fileID: 0}
@@ -317,7 +329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.677
+      value: 2.495
       objectReference: {fileID: 0}
     - target: {fileID: 3017639453922654416, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
       propertyPath: m_LocalRotation.w
