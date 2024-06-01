@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4903514012230681940}
   m_Layer: 0
   m_Name: Zombie
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialEnemyHealth: 5
   barrierInteractionLength: 4
-  enemyTarget: {fileID: 0}
-  detectionRange: 20
+  enemyTarget: {fileID: 7887092155611978711, guid: ca0908fc94b844d4881fc23557366298, type: 3}
+  detectionRange: 100
 --- !u!195 &4903514012230681940
 NavMeshAgent:
   m_ObjectHideFlags: 0

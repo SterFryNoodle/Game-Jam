@@ -7,7 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] ObjectPool pool;
     [SerializeField] float spawnInterval = 5f;
     [SerializeField] float spawnXPos = 40f;
-    [SerializeField] float spawnZpos = -10f;
+    [SerializeField] float spawnZPos = 100f;
     void Start()
     {
         StartCoroutine(SpawnEnemies());
@@ -27,6 +27,6 @@ public class SpawnManager : MonoBehaviour
 
     Vector3 GetSpawnPosition()
     {
-        return new Vector3(spawnXPos, 1, Random.Range(-spawnZpos,spawnZpos));
+        return new Vector3(spawnXPos, 1, Random.Range(spawnZPos,-spawnZPos));
     }
 }

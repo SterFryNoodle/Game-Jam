@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8096757030569127342}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2588191, y: -0, z: -0, w: 0.9659258}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 7.5, z: -8.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -108,6 +108,6 @@ MonoBehaviour:
   player: {fileID: 0}
   mouseSensitivity: 150
   distanceFromPlayer: 12
-  cameraHeight: 0.25
+  cameraHeight: 1
   minVerticalRotation: 15
-  maxVerticalRotation: 75
+  maxVerticalRotation: 85

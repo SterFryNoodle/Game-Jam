@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MaleVillager
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46b701e4993ac2a43a6ba6a73b2b896b, type: 3}
+      propertyPath: m_TagString
+      value: Survivor
+      objectReference: {fileID: 0}
     - target: {fileID: 1630794972795428178, guid: 46b701e4993ac2a43a6ba6a73b2b896b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

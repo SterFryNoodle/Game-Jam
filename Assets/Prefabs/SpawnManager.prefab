@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pool: {fileID: 0}
   spawnInterval: 2
-  spawnXPos: 40
-  spawnZpos: -10
+  spawnXPos: 12
+  spawnZpos: 100
