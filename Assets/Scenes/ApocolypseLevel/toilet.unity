@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 55371886}
   - component: {fileID: 55371885}
   - component: {fileID: 55371884}
+  - component: {fileID: 55371887}
   m_Layer: 0
   m_Name: Bridges_end
   m_TagString: Untagged
@@ -541,6 +542,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 90.251, z: 0}
+--- !u!65 &55371887
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55371883}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0967975, y: 1.0533029, z: 1.7152027}
+  m_Center: {x: 0.0000005364419, y: 0.44063902, z: 0.0000038146973}
 --- !u!1 &61409066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9071326839773273626, guid: a7c3c466476bbac44a120f14c0438d8a, type: 3}
@@ -565,7 +587,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5553121225573872079, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1001 &68882826
@@ -1793,6 +1815,7 @@ GameObject:
   - component: {fileID: 307543979}
   - component: {fileID: 307543978}
   - component: {fileID: 307543977}
+  - component: {fileID: 307543980}
   m_Layer: 0
   m_Name: Bridges_2
   m_TagString: Untagged
@@ -1865,6 +1888,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &307543980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307543976}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0967975, y: 1.053302, z: 4.854512}
+  m_Center: {x: -0.0008597376, y: 0.58572245, z: -0.05396129}
 --- !u!1 &308675449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1593494657131894866, guid: 61d1f510369772d4aa7a02f31e170171, type: 3}
@@ -1964,6 +2008,7 @@ GameObject:
   - component: {fileID: 337071690}
   - component: {fileID: 337071689}
   - component: {fileID: 337071688}
+  - component: {fileID: 337071691}
   m_Layer: 0
   m_Name: Bags_2
   m_TagString: Untagged
@@ -2036,6 +2081,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800092489}
   m_LocalEulerAnglesHint: {x: 0, y: 7, z: 0}
+--- !u!65 &337071691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337071687}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.497716, y: 2.5346951, z: 1.6031148}
+  m_Center: {x: -0.0017149448, y: 1.2276721, z: 0.040851504}
 --- !u!1 &356290773 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e964e0856cc39524aad51c8ed38e2a28, type: 3}
@@ -2234,6 +2300,7 @@ GameObject:
   - component: {fileID: 375476577}
   - component: {fileID: 375476576}
   - component: {fileID: 375476575}
+  - component: {fileID: 375476578}
   m_Layer: 0
   m_Name: Cooling_tower (1)
   m_TagString: Untagged
@@ -2306,6 +2373,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 13777653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &375476578
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375476574}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.515526, y: 11.288905, z: 4.4023123}
+  m_Center: {x: 0, y: 5.528999, z: -0.00000166893}
 --- !u!1 &378429487 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6622291810304500328, guid: 7623d07800e0439469dd30813641adb1, type: 3}
@@ -2877,6 +2965,7 @@ GameObject:
   - component: {fileID: 460362888}
   - component: {fileID: 460362887}
   - component: {fileID: 460362886}
+  - component: {fileID: 460362889}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -2949,6 +3038,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800092489}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &460362889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 460362885}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.6483622, y: 1.7470864, z: 1.3051324}
+  m_Center: {x: 0.00000011920929, y: 0.84682745, z: -0.00000029802322}
 --- !u!1 &473043952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3163,6 +3273,7 @@ GameObject:
   - component: {fileID: 505998393}
   - component: {fileID: 505998392}
   - component: {fileID: 505998391}
+  - component: {fileID: 505998394}
   m_Layer: 0
   m_Name: Bridges_support_1
   m_TagString: Untagged
@@ -3235,6 +3346,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &505998394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505998390}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8597107, y: 5.1747823, z: 0.8538666}
+  m_Center: {x: -0.0136089325, y: 2.5537322, z: 0.033942565}
 --- !u!1001 &507827968
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3379,6 +3511,7 @@ GameObject:
   - component: {fileID: 511461965}
   - component: {fileID: 511461964}
   - component: {fileID: 511461963}
+  - component: {fileID: 511461966}
   m_Layer: 0
   m_Name: Bridges_stairs_1
   m_TagString: Untagged
@@ -3451,6 +3584,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!64 &511461966
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511461962}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 717645656375292066, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1001 &518775378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3519,6 +3674,7 @@ GameObject:
   - component: {fileID: 532390656}
   - component: {fileID: 532390655}
   - component: {fileID: 532390654}
+  - component: {fileID: 532390657}
   m_Layer: 0
   m_Name: Bridges_turn
   m_TagString: Untagged
@@ -3591,6 +3747,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 179.949, z: 0}
+--- !u!65 &532390657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532390653}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.2407715, y: 1.0533037, z: 3.2406437}
+  m_Center: {x: -0.00000089407, y: 0.4958314, z: 0}
 --- !u!1001 &548121061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3680,6 +3857,7 @@ GameObject:
   - component: {fileID: 572247511}
   - component: {fileID: 572247510}
   - component: {fileID: 572247509}
+  - component: {fileID: 572247512}
   m_Layer: 0
   m_Name: Bags_2 (2)
   m_TagString: Untagged
@@ -3752,6 +3930,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800092489}
   m_LocalEulerAnglesHint: {x: 0, y: -0.324, z: 0}
+--- !u!65 &572247512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572247508}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4977157, y: 2.5346951, z: 1.6031147}
+  m_Center: {x: -0.0017130374, y: 1.2276721, z: 0.040852454}
 --- !u!1 &580730483
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,6 +3962,7 @@ GameObject:
   - component: {fileID: 580730486}
   - component: {fileID: 580730485}
   - component: {fileID: 580730484}
+  - component: {fileID: 580730487}
   m_Layer: 0
   m_Name: Pipes_horizontal_short
   m_TagString: Untagged
@@ -3835,6 +4035,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 690510678}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &580730487
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580730483}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7661767, y: 5.150839, z: 4.5839157}
+  m_Center: {x: -0.1618052, y: 2.5621724, z: -1.165551}
 --- !u!1 &585309688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,6 +4067,7 @@ GameObject:
   - component: {fileID: 585309691}
   - component: {fileID: 585309690}
   - component: {fileID: 585309689}
+  - component: {fileID: 585309692}
   m_Layer: 0
   m_Name: Cargo_1_close
   m_TagString: Untagged
@@ -3918,6 +4140,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: -1.086, z: 0}
+--- !u!65 &585309692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585309688}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 3, z: 3}
+  m_Center: {x: 0.060350776, y: 1.4190569, z: -0.010749042}
 --- !u!1001 &593905977
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4922,6 +5165,7 @@ GameObject:
   - component: {fileID: 682476521}
   - component: {fileID: 682476520}
   - component: {fileID: 682476519}
+  - component: {fileID: 682476522}
   m_Layer: 0
   m_Name: Bridges_stairs_1 (2)
   m_TagString: Untagged
@@ -4994,6 +5238,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!64 &682476522
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682476518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 717645656375292066, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1001 &684903678
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5414,6 +5680,7 @@ GameObject:
   - component: {fileID: 716700211}
   - component: {fileID: 716700210}
   - component: {fileID: 716700209}
+  - component: {fileID: 716700212}
   m_Layer: 0
   m_Name: Cargo_1_close (5)
   m_TagString: Untagged
@@ -5486,6 +5753,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 92.662, z: 0}
+--- !u!65 &716700212
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716700208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.000001, y: 3, z: 3.0000005}
+  m_Center: {x: 0.060352333, y: 1.4190569, z: -0.010745228}
 --- !u!1001 &725069012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8088,6 +8376,7 @@ GameObject:
   - component: {fileID: 1078791260}
   - component: {fileID: 1078791259}
   - component: {fileID: 1078791258}
+  - component: {fileID: 1078791261}
   m_Layer: 0
   m_Name: Cargo_1_close
   m_TagString: Untagged
@@ -8160,6 +8449,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 1.941, z: 0}
+--- !u!65 &1078791261
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078791257}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 3, z: 3}
+  m_Center: {x: 0.060350776, y: 1.4190569, z: -0.010745227}
 --- !u!1001 &1079472581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8543,6 +8853,7 @@ GameObject:
   - component: {fileID: 1138595397}
   - component: {fileID: 1138595396}
   - component: {fileID: 1138595395}
+  - component: {fileID: 1138595398}
   m_Layer: 0
   m_Name: Cargo_1_close (7)
   m_TagString: Untagged
@@ -8615,6 +8926,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: -2.756, z: 0}
+--- !u!65 &1138595398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1138595394}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.9999995, y: 3, z: 2.9999998}
+  m_Center: {x: 0.060350772, y: 1.4190569, z: -0.010745226}
 --- !u!1001 &1171155069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8889,6 +9221,7 @@ GameObject:
   - component: {fileID: 1231975868}
   - component: {fileID: 1231975867}
   - component: {fileID: 1231975866}
+  - component: {fileID: 1231975869}
   m_Layer: 0
   m_Name: Bridges_stairs_1 (1)
   m_TagString: Untagged
@@ -8961,6 +9294,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!64 &1231975869
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231975865}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 717645656375292066, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1 &1256385203
 GameObject:
   m_ObjectHideFlags: 0
@@ -9129,6 +9484,7 @@ GameObject:
   - component: {fileID: 1294085515}
   - component: {fileID: 1294085514}
   - component: {fileID: 1294085513}
+  - component: {fileID: 1294085516}
   m_Layer: 0
   m_Name: Cargo_1_close (2)
   m_TagString: Untagged
@@ -9201,6 +9557,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 87.014, z: 0}
+--- !u!65 &1294085516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294085512}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.000003, y: 3, z: 3.000001}
+  m_Center: {x: 0.060352467, y: 1.4190569, z: -0.010744754}
 --- !u!1001 &1294096107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9972,6 +10349,7 @@ GameObject:
   - component: {fileID: 1394957911}
   - component: {fileID: 1394957910}
   - component: {fileID: 1394957909}
+  - component: {fileID: 1394957912}
   m_Layer: 0
   m_Name: Building_9
   m_TagString: Untagged
@@ -10044,6 +10422,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 13777653}
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+--- !u!65 &1394957912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394957908}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 37.533955, y: 12.417289, z: 14.710621}
+  m_Center: {x: -1.0105927, y: 6.209148, z: 0.97419095}
 --- !u!1 &1421298398
 GameObject:
   m_ObjectHideFlags: 0
@@ -10092,6 +10491,7 @@ GameObject:
   - component: {fileID: 1426059942}
   - component: {fileID: 1426059941}
   - component: {fileID: 1426059940}
+  - component: {fileID: 1426059943}
   m_Layer: 0
   m_Name: Bridges_stairs_1
   m_TagString: Untagged
@@ -10164,6 +10564,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!64 &1426059943
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426059939}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 717645656375292066, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1001 &1432577723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10530,6 +10952,7 @@ GameObject:
   - component: {fileID: 1446967266}
   - component: {fileID: 1446967265}
   - component: {fileID: 1446967264}
+  - component: {fileID: 1446967267}
   m_Layer: 0
   m_Name: Cargo_1_close (4)
   m_TagString: Untagged
@@ -10602,6 +11025,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 87.927, z: 0}
+--- !u!65 &1446967267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446967263}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.9999995, y: 3, z: 2.9999998}
+  m_Center: {x: 0.06035411, y: 1.4190569, z: -0.010745226}
 --- !u!1001 &1453465010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10691,6 +11135,7 @@ GameObject:
   - component: {fileID: 1481717865}
   - component: {fileID: 1481717864}
   - component: {fileID: 1481717863}
+  - component: {fileID: 1481717866}
   m_Layer: 0
   m_Name: Cargo_1_close (1)
   m_TagString: Untagged
@@ -10763,6 +11208,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 95.396, z: 0}
+--- !u!65 &1481717866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481717862}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.000002, y: 3, z: 3.0000007}
+  m_Center: {x: 0.060348883, y: 1.4190569, z: -0.010745707}
 --- !u!1001 &1496651070
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10840,6 +11306,7 @@ GameObject:
   - component: {fileID: 1530069901}
   - component: {fileID: 1530069900}
   - component: {fileID: 1530069899}
+  - component: {fileID: 1530069902}
   m_Layer: 0
   m_Name: Pipes_horizontal_long (1)
   m_TagString: Untagged
@@ -10912,6 +11379,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 690510678}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1530069902
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530069898}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7661772, y: 5.1508408, z: 13.751744}
+  m_Center: {x: -0.16180117, y: 2.5019417, z: 1.1652465}
 --- !u!1 &1534492339
 GameObject:
   m_ObjectHideFlags: 0
@@ -10984,7 +11472,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -5553121225573872079, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1 &1545355357
@@ -11178,6 +11666,7 @@ GameObject:
   - component: {fileID: 1564777290}
   - component: {fileID: 1564777289}
   - component: {fileID: 1564777288}
+  - component: {fileID: 1564777291}
   m_Layer: 0
   m_Name: Cooling_tower
   m_TagString: Untagged
@@ -11250,6 +11739,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 13777653}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1564777291
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564777287}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.515526, y: 11.288905, z: 4.4023123}
+  m_Center: {x: -0.00000047683716, y: 5.528999, z: -0.00000166893}
 --- !u!1001 &1571585148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11401,6 +11911,7 @@ GameObject:
   - component: {fileID: 1584720992}
   - component: {fileID: 1584720991}
   - component: {fileID: 1584720990}
+  - component: {fileID: 1584720993}
   m_Layer: 0
   m_Name: Pipes_horizontal_short
   m_TagString: Untagged
@@ -11473,6 +11984,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 690510678}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1584720993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584720989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7661767, y: 5.150839, z: 4.5839157}
+  m_Center: {x: -0.16180138, y: 2.5621724, z: -1.1655519}
 --- !u!1001 &1585370929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11810,6 +12342,7 @@ GameObject:
   - component: {fileID: 1676223175}
   - component: {fileID: 1676223174}
   - component: {fileID: 1676223173}
+  - component: {fileID: 1676223176}
   m_Layer: 0
   m_Name: Cargo_1_close (3)
   m_TagString: Untagged
@@ -11882,6 +12415,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 87.927, z: 0}
+--- !u!65 &1676223176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676223172}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.9999995, y: 3, z: 2.9999998}
+  m_Center: {x: 0.060350772, y: 1.4190569, z: -0.01074475}
 --- !u!1001 &1706366040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12033,6 +12587,7 @@ GameObject:
   - component: {fileID: 1717345521}
   - component: {fileID: 1717345520}
   - component: {fileID: 1717345519}
+  - component: {fileID: 1717345522}
   m_Layer: 0
   m_Name: Bridges_stairs_2
   m_TagString: Untagged
@@ -12105,6 +12660,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1717345522
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717345518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5553121225573872079, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
 --- !u!1 &1721369631
 GameObject:
   m_ObjectHideFlags: 0
@@ -12441,6 +13018,7 @@ GameObject:
   - component: {fileID: 1746673267}
   - component: {fileID: 1746673266}
   - component: {fileID: 1746673265}
+  - component: {fileID: 1746673268}
   m_Layer: 0
   m_Name: Cargo_1_close
   m_TagString: Untagged
@@ -12513,6 +13091,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 3.539, z: 0}
+--- !u!65 &1746673268
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746673264}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8, y: 3, z: 3}
+  m_Center: {x: 0.060350776, y: 1.4190569, z: -0.010745227}
 --- !u!1 &1778606125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8523946376957711482, guid: ea950f95b8837034c81e3cfc6a91659f, type: 3}
@@ -13163,6 +13762,7 @@ GameObject:
   - component: {fileID: 1863208681}
   - component: {fileID: 1863208680}
   - component: {fileID: 1863208679}
+  - component: {fileID: 1863208682}
   m_Layer: 0
   m_Name: Pipes_horizontal_long
   m_TagString: Untagged
@@ -13235,6 +13835,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 690510678}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1863208682
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863208678}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7661772, y: 5.1508408, z: 13.751744}
+  m_Center: {x: -0.16180499, y: 2.5019417, z: 1.1652474}
 --- !u!1001 &1881507382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13971,6 +14592,7 @@ GameObject:
   - component: {fileID: 1940042145}
   - component: {fileID: 1940042144}
   - component: {fileID: 1940042143}
+  - component: {fileID: 1940042146}
   m_Layer: 0
   m_Name: Bridges_2 (2)
   m_TagString: Untagged
@@ -14043,6 +14665,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1439786930}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &1940042146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1940042142}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.0967975, y: 1.053302, z: 4.854512}
+  m_Center: {x: -0.0008597376, y: 0.58572245, z: -0.05396081}
 --- !u!1001 &1941410364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14335,6 +14978,7 @@ GameObject:
   - component: {fileID: 2026485092}
   - component: {fileID: 2026485091}
   - component: {fileID: 2026485090}
+  - component: {fileID: 2026485093}
   m_Layer: 0
   m_Name: Bags_2 (1)
   m_TagString: Untagged
@@ -14407,6 +15051,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1800092489}
   m_LocalEulerAnglesHint: {x: 0, y: 12.842, z: 0}
+--- !u!65 &2026485093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026485089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4977162, y: 2.5346951, z: 1.6031151}
+  m_Center: {x: -0.0017149451, y: 1.2276721, z: 0.040855322}
 --- !u!1001 &2035671311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14589,6 +15254,7 @@ GameObject:
   - component: {fileID: 2037431487}
   - component: {fileID: 2037431486}
   - component: {fileID: 2037431485}
+  - component: {fileID: 2037431488}
   m_Layer: 0
   m_Name: Cargo_1_close
   m_TagString: Untagged
@@ -14661,6 +15327,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1534492340}
   m_LocalEulerAnglesHint: {x: 0, y: 86.987, z: 0}
+--- !u!65 &2037431488
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037431484}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 8.000001, y: 3, z: 3.0000005}
+  m_Center: {x: 0.060350783, y: 1.4190569, z: -0.010745228}
 --- !u!1001 &2044017929
 PrefabInstance:
   m_ObjectHideFlags: 0

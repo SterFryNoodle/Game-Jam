@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8394564671348696917}
   - component: {fileID: 39101579604372494}
   - component: {fileID: 9073039738155813813}
+  - component: {fileID: 1987620147068567275}
   m_Layer: 0
   m_Name: Cargo_1_open
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1987620147068567275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 127178047449923429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 7.9999995, y: 2.9999998, z: 3}
+  m_Center: {x: 0.060351133, y: 1.4894241, z: 0.0058918}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1242932486607395573}
   - component: {fileID: 260077401819767459}
   - component: {fileID: 3640696628630908828}
-  - component: {fileID: -4680176324725290111}
+  - component: {fileID: 2139451258181100760}
   m_Layer: 0
   m_Name: Bridges_stairs_2
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-4680176324725290111
-BoxCollider:
+--- !u!64 &2139451258181100760
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,6 +102,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.0967958, y: 4.2921143, z: 5.844222}
-  m_Center: {x: 0, y: 2.0044794, z: 0.00000011920929}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5553121225573872079, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8783539148671118496}
   - component: {fileID: 7216419786807156898}
   - component: {fileID: 340166678495808913}
-  - component: {fileID: 186060611795455217}
+  - component: {fileID: 3484565786991907491}
   m_Layer: 0
   m_Name: Fence_corner
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &186060611795455217
-BoxCollider:
+--- !u!64 &3484565786991907491
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,6 +102,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.8726463, y: 1.5499303, z: 2.8726408}
-  m_Center: {x: 0.11631203, y: 0.7692714, z: -0.11631179}
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3795083389254795550, guid: 1afa6e7f3f93138489a1e21f03345612, type: 3}
