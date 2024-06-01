@@ -47,4 +47,4 @@ MonoBehaviour:
   pool: {fileID: 0}
   spawnInterval: 2
   spawnXPos: 12
-  spawnZpos: 100
+  spawnZPos: 100

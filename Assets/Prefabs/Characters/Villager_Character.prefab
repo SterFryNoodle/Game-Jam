@@ -360,6 +360,9 @@ GameObject:
   - component: {fileID: 1836602652777958736}
   - component: {fileID: 3460335495335043089}
   - component: {fileID: 6773149919796886869}
+  - component: {fileID: 1424388155761951021}
+  - component: {fileID: 3254452744949766204}
+  - component: {fileID: 7600235377271599013}
   m_Layer: 0
   m_Name: Villager_Character
   m_TagString: Survivor
@@ -375,7 +378,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4231206016980206119}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: 16.2, y: 1.7901335, z: 48.37}
   m_LocalScale: {x: 0.9499999, y: 0.94999963, z: 0.94999963}
   m_ConstrainProportionsScale: 0
@@ -383,7 +386,7 @@ Transform:
   - {fileID: 1019341438706693863}
   - {fileID: 8305217520167164682}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!137 &3460335495335043089
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -473,6 +476,58 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7702557, y: 0.41773346, z: 2.6933665}
   m_Center: {x: -0.002310008, y: -0.049832497, z: -0.3738148}
+--- !u!114 &1424388155761951021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231206016980206119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4b19ce82aa3a7840b58f41e788e5f0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+--- !u!114 &3254452744949766204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231206016980206119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61a8113b1b6e244fad8c47fa0efb9a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 25
+  safeDistance: 10
+  attackRange: 16
+  backUpDistance: 3
+  allyBullet: {fileID: 0}
+--- !u!195 &7600235377271599013
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4231206016980206119}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.9728687
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 0.31806844
+  m_BaseOffset: 0.15903422
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &6389229231475749312
 GameObject:
   m_ObjectHideFlags: 0
