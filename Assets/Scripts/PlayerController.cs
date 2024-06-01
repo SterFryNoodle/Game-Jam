@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     float horizontalInput;
-    float verticalInput;    
+    float verticalInput;
+    Animator animator;
     
     [SerializeField] float speed; //SerializeField means you can access & change the variable value in Unity.
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
@@ -23,7 +24,8 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {        
-        speed = baseSpeed; // initializes player speed at base once game starts.        
+        speed = baseSpeed; // initializes player speed at base once game starts.
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -43,10 +45,19 @@ public class PlayerController : MonoBehaviour
         if (isSprinting)
         {
             speed = sprintSpeed;
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);
         }
-        else
+        else if ((horizontalInput > 0 || verticalInput > 0) && !isSprinting)
         {
             speed = baseSpeed;
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isRunning", false);
+        }
+        else if (horizontalInput <= 0 && verticalInput <= 0 && !isSprinting)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isRunning", false);
         }
     }
 
