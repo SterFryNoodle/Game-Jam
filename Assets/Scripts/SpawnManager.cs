@@ -27,6 +27,6 @@ public class SpawnManager : MonoBehaviour
 
     Vector3 GetSpawnPosition()
     {
-        return new Vector3(spawnXPos, 1, Random.Range(spawnZPos,-spawnZPos));
+        return new Vector3(spawnXPos, -2.4f , spawnZPos);
     }
 }
