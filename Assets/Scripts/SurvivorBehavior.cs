@@ -7,6 +7,7 @@ public class SurvivorBehavior : MonoBehaviour
 {    
     Transform allyTarget;
     NavMeshAgent allyAgent;
+    Animator animator;
     bool isAttacking;
     
     [SerializeField] float detectionRange = 25f;    
@@ -29,6 +30,7 @@ public class SurvivorBehavior : MonoBehaviour
     {
         allyBullet = GetComponentInChildren<ParticleSystem>();
         allyAgent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -49,11 +51,12 @@ public class SurvivorBehavior : MonoBehaviour
             {
                 isAttacking = true;
                 AttackEnemy(isAttacking);
+                animator.SetTrigger("isFiring");
             }
             else
             {
                 isAttacking = false;
-                AttackEnemy(isAttacking);
+                AttackEnemy(isAttacking);                
             }
 
             // Enemy is reaching into run boundaries.
@@ -62,6 +65,12 @@ public class SurvivorBehavior : MonoBehaviour
                 Vector3 directionAwayFromEnemy = (transform.position - allyTarget.position).normalized;
                 Vector3 newPosition = transform.position + directionAwayFromEnemy * backUpDistance;
                 allyAgent.SetDestination(newPosition);
+                animator.SetBool("isWalking", true);
+
+                if (gameObject.transform.position ==  newPosition)
+                {
+                    animator.SetBool("isWalking", false);                    
+                }
             }
 
             // Distance tracking enemies.

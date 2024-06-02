@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8437114495867771490, guid: 147111fb15e297f4e94b4f3bb1cfc45c, type: 3}
   initialPoolSize: 5
-  maxPoolSize: 50
+  maxPoolSize: 100
   amtIncrease: 5
   timeInterval: 15
