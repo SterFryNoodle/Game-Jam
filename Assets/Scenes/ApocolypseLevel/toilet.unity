@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.214, g: 0.12346154, b: 0.12346154, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -13469,6 +13469,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2312512114840559366, guid: cf4e0b7dac195244f8a0d5fd633177ef, type: 3}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 4982046706403160629, guid: 147111fb15e297f4e94b4f3bb1cfc45c, type: 3}
     - target: {fileID: 3863954742292429233, guid: cf4e0b7dac195244f8a0d5fd633177ef, type: 3}
       propertyPath: m_Name
       value: ObjectPool
@@ -13833,7 +13837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2745431038338385510, guid: 0855e6209eaac2249a68b9035d028923, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.85
+      value: 1.325
       objectReference: {fileID: 0}
     - target: {fileID: 2745431038338385510, guid: 0855e6209eaac2249a68b9035d028923, type: 3}
       propertyPath: m_LocalPosition.z

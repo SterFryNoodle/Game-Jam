@@ -9,6 +9,7 @@ public class EnemyBehavior : MonoBehaviour
     private bool isInteractingWithBarrier = false;
     private ObjectPool pool;
     private int enemyHealth;
+    Animator animator;
 
     [SerializeField] int initialEnemyHealth = 5;
     [SerializeField] float barrierInteractionLength = 4f;
@@ -30,7 +31,8 @@ public class EnemyBehavior : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        pool = FindObjectOfType<ObjectPool>();        
+        pool = FindObjectOfType<ObjectPool>();   
+        animator = GetComponent<Animator>();
     }
     
     void Update()
@@ -83,7 +85,8 @@ public class EnemyBehavior : MonoBehaviour
         enemyHealth--;
         
         if (enemyHealth == 0)
-        {           
+        {
+            animator.SetTrigger("isDead");
             pool.ReturnEnemy(gameObject);
         }
     }
@@ -93,6 +96,10 @@ public class EnemyBehavior : MonoBehaviour
         if (other.CompareTag("Barrier"))
         {
             StartCoroutine(InteractWithBarrier(other.gameObject));
+        }
+        else if (other.CompareTag("Player") || other.CompareTag("Survivor"))
+        {
+            animator.SetTrigger("isBiting");
         }
     }
 
