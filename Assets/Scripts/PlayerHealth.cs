@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] TMP_Text defeatText;
     private int currentHealth;
     private int dmgTaken = 10;
-    private int delaySeconds = 4;
+    private int delaySeconds = 6;
     
     void Start()
     {
