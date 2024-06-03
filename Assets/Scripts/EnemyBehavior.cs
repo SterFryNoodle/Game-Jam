@@ -80,15 +80,20 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    private void OnParticleCollision(GameObject other)
+    void OnParticleCollision(GameObject other)
     {
         enemyHealth--;
         
         if (enemyHealth == 0)
         {
-            animator.SetTrigger("isDead");
+            Invoke("AnimateDeath", 3);
             pool.ReturnEnemy(gameObject);
         }
+    }
+
+    void AnimateDeath()
+    {
+        animator.SetTrigger("isDead");
     }
 
     void OnTriggerEnter(Collider other)

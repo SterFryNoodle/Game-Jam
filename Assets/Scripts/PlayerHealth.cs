@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int maxHealth = 100;
+    [SerializeField] TMP_Text defeatText;
     private int currentHealth;
     private int dmgTaken = 10;
+    private int delaySeconds = 4;
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -26,7 +31,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            Invoke("TakeBackToMenu", delaySeconds);
         }
+    }
+
+    void TakeBackToMenu()
+    {
+        defeatText.enabled = true;
+        SceneManager.LoadScene("Main Menu");
     }
 }
