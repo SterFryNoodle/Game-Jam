@@ -9,12 +9,16 @@ public class EnemyBehavior : MonoBehaviour
     private bool isInteractingWithBarrier = false;
     private ObjectPool pool;
     private int enemyHealth;
+    bool isCooldownActive;
+    float soundCooldown = 4f;
     Animator animator;
+    AudioSource audioSource;
 
     [SerializeField] int initialEnemyHealth = 5;
     [SerializeField] float barrierInteractionLength = 4f;
     [SerializeField] Transform enemyTarget;
     [SerializeField] float detectionRange = 20f;
+    [SerializeField] AudioClip[] zombieClips;
 
     void OnEnable()
     {        
@@ -33,6 +37,7 @@ public class EnemyBehavior : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         pool = FindObjectOfType<ObjectPool>();   
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
     
     void Update()
@@ -83,7 +88,12 @@ public class EnemyBehavior : MonoBehaviour
     void OnParticleCollision(GameObject other)
     {
         enemyHealth--;
-        
+
+        if(!audioSource.isPlaying)
+        {
+            PlayZombieClips();
+        }        
+
         if (enemyHealth == 0)
         {
             pool.ReturnEnemy(gameObject);
@@ -122,5 +132,23 @@ public class EnemyBehavior : MonoBehaviour
         isInteractingWithBarrier = false;
 
         agent.destination = enemyTarget.position;
+    }
+
+    void PlayZombieClips()
+    {
+        if (zombieClips.Length > 0)
+        {
+            int randomIndex = Random.Range(0, zombieClips.Length);
+            audioSource.clip = zombieClips[randomIndex];
+            audioSource.Play();
+            StartCoroutine(SoundCooldownCoroutine()); 
+        }
+    }
+
+    IEnumerator SoundCooldownCoroutine()
+    {        
+        isCooldownActive = true;        
+        yield return new WaitForSeconds(soundCooldown);
+        isCooldownActive = false;
     }
 }

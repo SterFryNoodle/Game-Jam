@@ -7,15 +7,18 @@ public class SurvivorHealth : MonoBehaviour
     [SerializeField] int maxHealth = 100;
 
     Animator animator;
+    SurvivorBehavior survivorBehavior;
+    AudioSource hitSource;
     private int currentHealth;
     private int dmgTaken = 10;
     void Start()
     {
         currentHealth = maxHealth;
         animator = GetComponent<Animator>();
+        hitSource = GetComponent<AudioSource>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -28,10 +31,14 @@ public class SurvivorHealth : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int amount)
+    void TakeDamage(int amount)
     {
         currentHealth -= amount;
-
+        if (!hitSource.isPlaying && gameObject != null)
+        {
+            survivorBehavior.PlayRandomHitClips();
+        }
+        
         if (currentHealth <= 0)
         {
             Destroy(gameObject);

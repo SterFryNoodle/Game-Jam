@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     float horizontalInput;
     float verticalInput;
-    Animator animator;
+    Animator animator;    
     
     [SerializeField] float speed; //SerializeField means you can access & change the variable value in Unity.
     [SerializeField][Range(1, 20)] float sprintSpeed = 3f;
     [SerializeField][Range(1, 15)] float baseSpeed = 1f;
-    
+    [SerializeField] AudioClip[] attackClips;
     void OnEnable()
     {
         EnemyManager.Instance.RegisterAlly(transform);
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {        
         speed = baseSpeed; // initializes player speed at base once game starts.
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();        
     }
 
     void Update()

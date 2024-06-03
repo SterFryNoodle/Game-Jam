@@ -41,6 +41,6 @@ public class PlayerHealth : MonoBehaviour
 
     void TakeBackToMenu()
     {        
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadSceneAsync("Main Menu");
     }
 }

@@ -10,13 +10,18 @@ public class SurvivorBehavior : MonoBehaviour
     NavMeshAgent allyAgent;
     Animator animator;
     bool isAttacking;
-    
+    bool isCooldownActive;
+    AudioSource attackSource;
+    float soundCooldown = 6f;
+
     [SerializeField] float detectionRange = 25f;    
     [SerializeField] float safeDistance = 10f;
     [SerializeField] float attackRange = 16f;
     [SerializeField] float backUpDistance = 3f;
     [SerializeField] ParticleSystem allyBullet;
-    
+    [SerializeField] AudioClip[] attackClips;
+    [SerializeField] AudioClip[] takeDamageClips;
+
     void OnEnable()
     {
         EnemyManager.Instance.RegisterAlly(transform);
@@ -31,7 +36,8 @@ public class SurvivorBehavior : MonoBehaviour
     {
         allyBullet = GetComponentInChildren<ParticleSystem>();
         allyAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();        
+        animator = GetComponent<Animator>();
+        attackSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -85,11 +91,45 @@ public class SurvivorBehavior : MonoBehaviour
     void AttackEnemy(bool attack)
     {
         var getEmissionModule = allyBullet.emission;
-        getEmissionModule.enabled = attack;        
+        getEmissionModule.enabled = attack;
+        
+        if (attack && !attackSource.isPlaying)
+        {
+            PlayRandomAttackClips();
+        }
     }
 
     void TrackEnemy()
     {
         transform.LookAt(allyTarget);
-    }    
+    }
+
+    void PlayRandomAttackClips()
+    {
+        if (attackClips.Length > 0)
+        {
+            int randomIndex = Random.Range(0, attackClips.Length);
+            attackSource.clip = attackClips[randomIndex];
+            attackSource.Play();
+            StartCoroutine(SoundCooldownCoroutine());
+        }
+    }
+
+    IEnumerator SoundCooldownCoroutine()
+    {
+        isCooldownActive = true;
+        yield return new WaitForSeconds(soundCooldown);
+        isCooldownActive = false;
+    }
+
+    public void PlayRandomHitClips()
+    {
+        if (takeDamageClips.Length > 0)
+        {
+            int randomIndex = Random.Range(0, takeDamageClips.Length);
+            attackSource.clip = takeDamageClips[randomIndex];
+            attackSource.Play();
+            StartCoroutine(SoundCooldownCoroutine());
+        }
+    }
 }

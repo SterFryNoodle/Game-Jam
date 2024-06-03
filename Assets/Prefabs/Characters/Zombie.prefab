@@ -1113,6 +1113,11 @@ MonoBehaviour:
   barrierInteractionLength: 4
   enemyTarget: {fileID: 3212408118974124712, guid: fe16123d042db214eb3e0c6da64eeed2, type: 3}
   detectionRange: 100
+  zombieClips:
+  - {fileID: 8300000, guid: 9df0a43676b0d8448a5351396bd332df, type: 3}
+  - {fileID: 8300000, guid: 1a7a8316107921648b9002d16dbf55c0, type: 3}
+  - {fileID: 8300000, guid: 658ba8331d2f07e478793fc06532aca5, type: 3}
+  - {fileID: 8300000, guid: f0e0e9647cad3044b81929e7b0c1f526, type: 3}
 --- !u!195 &1758900086268549351
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1146,8 +1151,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
