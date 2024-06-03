@@ -820,6 +820,12 @@ MonoBehaviour:
   attackRange: 12
   backUpDistance: 6
   allyBullet: {fileID: 4632388887746710246, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: e736b6d97d8aee148acbec91983a7481, type: 3}
+  - {fileID: 8300000, guid: d92d9375e9c04014fa76b5a6fe3863a2, type: 3}
+  takeDamageClips:
+  - {fileID: 8300000, guid: b006eab202181924eb7ee5cc3fd43979, type: 3}
+  - {fileID: 8300000, guid: ee4b44ee0733c864b9fb60cea777f8a5, type: 3}
 --- !u!195 &6509825174278704640
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -853,8 +859,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

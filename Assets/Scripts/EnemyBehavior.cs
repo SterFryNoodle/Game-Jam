@@ -89,10 +89,7 @@ public class EnemyBehavior : MonoBehaviour
     {
         enemyHealth--;
 
-        if(!audioSource.isPlaying)
-        {
-            PlayZombieClips();
-        }        
+        PlayZombieClips();
 
         if (enemyHealth == 0)
         {

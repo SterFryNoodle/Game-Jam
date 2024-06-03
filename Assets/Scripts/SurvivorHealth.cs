@@ -34,14 +34,15 @@ public class SurvivorHealth : MonoBehaviour
     void TakeDamage(int amount)
     {
         currentHealth -= amount;
-        if (!hitSource.isPlaying && gameObject != null)
-        {
-            survivorBehavior.PlayRandomHitClips();
-        }
-        
+
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
         }
+
+        if (!hitSource.isPlaying)
+        {
+            survivorBehavior.PlayRandomHitClips();
+        }        
     }
 }

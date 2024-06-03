@@ -1482,7 +1482,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.24044836, z: 0, w: 0.970662}
   m_LocalPosition: {x: 26.531116, y: 0.2500019, z: 48.757977}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1485262806021104249}
@@ -1612,6 +1612,15 @@ MonoBehaviour:
   attackRange: 12
   backUpDistance: 6
   allyBullet: {fileID: 4632388887746710246, guid: 3c1a3c86e427ed14b90d9e7f21980afa, type: 3}
+  attackClips:
+  - {fileID: 8300000, guid: dff33ae1439e4fe49a1561232c5b6e31, type: 3}
+  - {fileID: 8300000, guid: cdd702a652e306641b0b460dc4727c7c, type: 3}
+  - {fileID: 8300000, guid: ed44bc966f6ee5443a21163661f14d0a, type: 3}
+  - {fileID: 8300000, guid: 6d763cccd33514e44b808a7fc229d868, type: 3}
+  - {fileID: 8300000, guid: 00c526e45cf26bf44b07e7296bb5c5ad, type: 3}
+  takeDamageClips:
+  - {fileID: 8300000, guid: bb6ba44e3009f2e48afe8b41f131d306, type: 3}
+  - {fileID: 8300000, guid: 89a9feb4cd452a94dbd543b1d1f981c9, type: 3}
 --- !u!82 &5557134200977809196
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1623,8 +1632,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
