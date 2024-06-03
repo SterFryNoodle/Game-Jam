@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEngine.ParticleSystem;
 
 public class SurvivorBehavior : MonoBehaviour
 {    
@@ -15,7 +16,7 @@ public class SurvivorBehavior : MonoBehaviour
     [SerializeField] float attackRange = 16f;
     [SerializeField] float backUpDistance = 3f;
     [SerializeField] ParticleSystem allyBullet;
-
+    
     void OnEnable()
     {
         EnemyManager.Instance.RegisterAlly(transform);
@@ -30,12 +31,12 @@ public class SurvivorBehavior : MonoBehaviour
     {
         allyBullet = GetComponentInChildren<ParticleSystem>();
         allyAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();        
     }
 
     void Update()
     {
-        MoveFromEnemyInRange();
+        MoveFromEnemyInRange();        
     }
 
     void MoveFromEnemyInRange()
@@ -84,11 +85,11 @@ public class SurvivorBehavior : MonoBehaviour
     void AttackEnemy(bool attack)
     {
         var getEmissionModule = allyBullet.emission;
-        getEmissionModule.enabled = attack;
+        getEmissionModule.enabled = attack;        
     }
 
     void TrackEnemy()
     {
         transform.LookAt(allyTarget);
-    }
+    }    
 }

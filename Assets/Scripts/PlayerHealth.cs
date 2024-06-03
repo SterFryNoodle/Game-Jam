@@ -6,6 +6,7 @@ using TMPro;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] DamageEffect damageEffect;
     [SerializeField] int maxHealth = 100;
     [SerializeField] TMP_Text defeatText;
     private int currentHealth;
@@ -28,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
+        damageEffect.FlashScreen();
 
         if (currentHealth <= 0)
         {

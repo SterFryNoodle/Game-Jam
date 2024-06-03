@@ -1,22 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class ProcessFireInput : MonoBehaviour
 {
     [SerializeField] ParticleSystem bullet;
-
+    
     Animator animator;
-
+    
     void Start()
     {
         bullet = GetComponentInChildren<ParticleSystem>();
-        animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();        
     }
 
     void Update()
     {
-        FireInput();
+        FireInput();        
     }
 
     void FireInput()
@@ -26,6 +27,7 @@ public class ProcessFireInput : MonoBehaviour
             var getEmissionModule = bullet.emission;
 
             getEmissionModule.enabled = true;
+
             animator.SetBool("isShooting", true);
         }
         else if (Input.GetKeyUp(KeyCode.Mouse0))
