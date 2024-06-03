@@ -97,9 +97,15 @@ public class EnemyBehavior : MonoBehaviour
         {
             StartCoroutine(InteractWithBarrier(other.gameObject));
         }
-        else if (other.CompareTag("Player") || other.CompareTag("Survivor"))
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Survivor")
         {
+            agent.isStopped = true;
             animator.SetTrigger("isBiting");
+            agent.isStopped = false;
         }
     }
 
