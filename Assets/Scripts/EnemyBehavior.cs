@@ -86,15 +86,9 @@ public class EnemyBehavior : MonoBehaviour
         
         if (enemyHealth == 0)
         {
-            Invoke("AnimateDeath", 3);
             pool.ReturnEnemy(gameObject);
         }
-    }
-
-    void AnimateDeath()
-    {
-        animator.SetTrigger("isDead");
-    }
+    }    
 
     void OnTriggerEnter(Collider other)
     {
@@ -106,7 +100,7 @@ public class EnemyBehavior : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Survivor")
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Survivor"))
         {
             agent.isStopped = true;
             animator.SetTrigger("isBiting");
