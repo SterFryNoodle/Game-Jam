@@ -32,13 +32,13 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
+            defeatText.enabled = true;
             Invoke("TakeBackToMenu", delaySeconds);
         }
     }
 
     void TakeBackToMenu()
-    {
-        defeatText.enabled = true;
+    {        
         SceneManager.LoadScene("Main Menu");
     }
 }
